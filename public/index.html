@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./lib/angular/angular.min.js"></script>
+  <script src="./lib/angular-route/angular-route.min.js"></script>
+</head>
+<body >
+  <div ng-controller="NewsListController as nlc" ng-init="init()">
+    <input type="text" ng-model="newsUrl" placeholder="url"></input>
+    <input type="text" ng-model="newsBy" placeholder="author"></input>
+    <input type="text" ng-model="newsTitle" placeholder="title"></input>
+    <input type="text" ng-model="newsDate" placeholder="date"></input>
+    <input type="text" ng-model="newsText" placeholder="text"></input>
+    <button ng-click="submitNews(newsUrl, newsBy, newsTitle, newsDate, newsText)">submit!</button>
+    <div ng-repeat="news in newsList ">
+      <div><a href="{{news.url}}">{{news.title}}</a></div>
+      <div>{{news.date}}</div>
+      <div>{{news.by}}</div>
+      <div ng-click="upVote(news)">{{news.votes}}</div>
+    </div>
+  </div>
+  <script src="mockData.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

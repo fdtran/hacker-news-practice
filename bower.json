@@ -1,0 +1,22 @@
+{
+  "name": "hacker-news-ng",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "felix.d.tran@gmail.com"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.3",
+    "angular-route": "^1.6.3"
+  }
+}
